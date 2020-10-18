@@ -57,3 +57,20 @@ done
 
 echo "SORTED ARRAY (DESCENDING ORDER)"
 echo ${array[@]}
+
+
+for((i=0;i<${#array[@]};i++))
+do
+        for((j=$i;j<${#array[@]};j++))
+        do
+                if [ ${array[$i]} -lt ${array[$j]} ]
+                then
+                        temp=${array[$i]}
+                        array[$i]=${array[j]}
+                        array[$j]=$temp
+                fi
+        done
+done
+
+echo "SORTED ARRAY (ASCENDING ORDER)"
+echo ${array[@]}
