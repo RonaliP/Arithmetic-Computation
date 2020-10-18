@@ -8,3 +8,8 @@ echo "$a $b $c "
 
 result1=$((a+b*c))
 echo "(a+b*c)=$result1"
+
+#2nd computation
+
+result2=$((a*b+c))
+echo "(a*b+c)=$result2"
