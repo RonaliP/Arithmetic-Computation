@@ -19,3 +19,8 @@ echo "(a*b+c)=$result2"
 result3=$((c+a/b))
 echo "(c+a/b)=$result3"
 
+#4th computation
+
+result4=$((a%b+c))
+echo "(a%b+c)=$result4"
+
