@@ -42,4 +42,18 @@ echo "Stored in array"
 array=($result1 $result2 $result3 $result4)
  echo ${array[@]}
 
+for((i=0;i<${#array[@]};i++))
+do
+	for((j=$i;j<${#array[@]};j++))
+	do
+		if [ ${array[$i]} -gt ${array[$j]} ]
+		then
+			temp=${array[$i]}
+			array[$i]=${array[j]}
+			array[$j]=$temp
+		fi
+	done
+done
 
+echo "SORTED ARRAY (DESCENDING ORDER)"
+echo ${array[@]}
