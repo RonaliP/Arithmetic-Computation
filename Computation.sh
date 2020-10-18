@@ -1,6 +1,8 @@
 
 echo "WELCOME TO ARITHMETIC COMPUTATION PROGRAM"
 
+declare -A Result
+
 read -p "ENTER THREE NUMBERS" a b c
 echo "$a $b $c "
 
@@ -23,4 +25,15 @@ echo "(c+a/b)=$result3"
 
 result4=$((a%b+c))
 echo "(a%b+c)=$result4"
+
+Result[1st]=$result1
+Result[2nd]=$result2
+Result[3rd]=$result3
+Result[4th]=$result4
+echo "STORED IN DICTIONARY"
+for i in ${!Result[@]}
+do
+	echo "$Result[$i]=" ${Result[$i]}
+done
+#echo ${Result[@]}
 
