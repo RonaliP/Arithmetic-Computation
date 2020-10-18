@@ -1,2 +1,6 @@
 
 echo "WELCOME TO ARITHMETIC COMPUTATION PROGRAM"
+
+read -p "ENTER THREE NUMBERS" a b c
+echo "$a $b $c "
+
