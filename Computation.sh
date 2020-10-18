@@ -1,4 +1,4 @@
-
+#!/bin/bash
 echo "WELCOME TO ARITHMETIC COMPUTATION PROGRAM"
 
 declare -A Result
@@ -31,9 +31,15 @@ Result[2nd]=$result2
 Result[3rd]=$result3
 Result[4th]=$result4
 echo "STORED IN DICTIONARY"
-for i in ${!Result[@]}
+echo ${Result[@]}
+
+for j in ${!Result[@]}
 do
-	echo "$Result[$i]=" ${Result[$i]}
+	echo "$Result[$j]=" ${Result[$j]}
 done
-#echo ${Result[@]}
+
+echo "Stored in array"
+array=($result1 $result2 $result3 $result4)
+ echo ${array[@]}
+
 
